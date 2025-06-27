@@ -23,8 +23,6 @@ int main() {
     float  pib2;
     float  pturisticos2;
     float densidadepopulacional;
-    float pib_percapita;
-    float superpoder;
     
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
