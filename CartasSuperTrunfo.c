@@ -23,10 +23,10 @@ int main() {
     float  pib2;
     float  pturisticos2;
 //===============================
-    int r1,r2,r3;
+    int r1,r2,r3,r4,r5,r6;
 
 //===============================
-   float pibpercapita, densidadepopu;
+   float pibpercapita, densidadepopu, pibpercapita2, densidadepopu2;
 
     float superpoder;
     
@@ -37,8 +37,8 @@ int main() {
     
     printf ("==== BEM VINDO AO JOGO DE SUPER TRUNGO====\n \n");
     
-    printf("-- Comece preenchendo informacao da primeira carta \n");
-    printf ("Digite o nome do estado: ");
+        printf("-- Comece preenchendo informacao da primeira carta \n");
+        printf ("Digite o nome do estado: ");
             scanf("%s", &estado );    
 
             printf ("Digite numero da populacao: ");
@@ -57,7 +57,7 @@ int main() {
             scanf("%f", &pturisticos ); 
 
 // SEGUNDA CARTA ABAIXO // 
-   printf("===== PREENCHA A INFORMACAO DA SEGUNDA CARTA ===== \n");
+    printf("===== PREENCHA A INFORMACAO DA SEGUNDA CARTA ===== \n");
        printf ("Digite o nome do estado: ");
             scanf("%s", &estado2 );    
     
@@ -90,27 +90,29 @@ int main() {
         printf("===============RESULTADO DA SEGUNDA CARTA==================\n");
         
     printf("o estado : %s \n", estado2);
-            printf("Populacao : %f \n", populacao2);
-            printf("Codigo é: %s \n", codigo2);
-            printf("area de Km: %f \n", areadekm2);
-            printf("PIB: %f \n", pib2);
-            printf("Pontos turisticos: %f \n", pturisticos2);
+        printf("Populacao : %f \n", populacao2);
+        printf("Codigo é: %s \n", codigo2);
+        printf("area de Km: %f \n", areadekm2);
+        printf("PIB: %f \n", pib2);
+        printf("Pontos turisticos: %f \n", pturisticos2);
 
      densidadepopu =  populacao / areadekm;
      pibpercapita  =   pib / populacao;
+     densidadepopu2 =  populacao2 / areadekm2;
+     pibpercapita2  =   pib2 / populacao2;
         
         printf("******A densidade populacional é: %f *******\n", densidadepopu);
         printf("*******O Pib percapita é: %f *******\n \n", pibpercapita);
 
-            printf ("**Indicacao de vencedorer '(1) carta 1 venceu' '(0) Carta 2 venceu' **");
-            printf ("==================================================================");
+            printf ("**Indicacao de vencedorer '(1) carta 1 venceu' '(0) Carta 2 venceu' **\n \n");
+            
             printf ("- A Area Por Km ganhou: %d \n", r1= areadekm > areadekm2);
             printf ("- populacao vencedora é:%d \n", r2=populacao > populacao2);
             printf ("- PIB vencedora é: %d \n ",r3 = pib > pib2 );
-            printf (" ========================================================");
-            printf ("- Pontos turisticos vencedor é: %d \n", pturisticos);
-            printf ("- Densidade populacional %f \n", densidadepopu);
-            printf ("- Pibpercapita é:%f \n", pibpercapita); 
+     
+            printf ("- Pontos turisticos vencedor é: %d \n", r6 = pturisticos > pturisticos2);
+            printf ("- Densidade populacional %d \n", r4= densidadepopu > densidadepopu2);
+            printf ("- Pibpercapita é:%d \n", r5 = pibpercapita > pibpercapita2); 
     
     return 0;
 }
